@@ -11,8 +11,13 @@ function convertTemperature($value, $unit) {
     }
 }
 
-// Example conversion
-$value = 100;
-$unit = 'Celsius';
+// Request user input for temperature and unit
+echo "Enter the temperature value: ";
+$value = trim(fgets(STDIN)); // Get input from the user
+
+echo "Enter the unit (Celsius or Fahrenheit): ";
+$unit = trim(fgets(STDIN));
+
+// Perform the conversion and display the result
 $result = convertTemperature($value, $unit);
-echo "The conversion of $value $unit is $result.";
+echo "The conversion of $value $unit is $result.\n";
